@@ -4,8 +4,7 @@ block content
   #banner.page-header
     .row
       .col-md-6.col-sm-12
-        h1=title
+        h1= title
   .row
     .col-md-6.col-sm-12
-       p
-        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, leo eget sodales vestibulum, nulla nibh mattis elit, pulvinar sollicitudin libero metus ut enim. Proin venenatis nisi sed enim aliquet, ut dictum mauris porttitor. Maecenas eros arcu, volutpat quis dolor a, finibus faucibus eros. Aenean cursus non leo in accumsan. In sed fringilla arcu. Donec sit amet justo pulvinar, gravida est quis, dapibus eros. Nunc dictum nisl non rhoncus vestibulum.
+       p !{(content).replace(/\n/g, '<br/>')}
