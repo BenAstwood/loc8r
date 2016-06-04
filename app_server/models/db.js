@@ -1,5 +1,8 @@
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://localhost/Loc8r';
+if(process.env.NODE_ENV === 'production'){
+  dbURI = process.env.MONGOLAB_URI;
+}
 mongoose.connect(dbURI);
 
 // readline for windows
@@ -51,3 +54,6 @@ process.on('SIGTERM', function(){
     process.exit(0);
   });
 });
+
+//mongoose schema
+require('./locations');
